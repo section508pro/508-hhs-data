@@ -1,0 +1,235 @@
+[
+  {
+    "id": "aria-hidden-focus",
+    "title": "`[aria-hidden=\"true\"]` elements contain focusable descendents",
+    "description": "Focusable descendents within an `[aria-hidden=\"true\"]` element prevent those interactive elements from being available to users of assistive technologies like screen readers. [Learn more](https://web.dev/aria-hidden-focus/).",
+    "score": 0,
+    "scoreDisplayMode": "binary",
+    "details": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "itemType": "node",
+          "subItemsHeading": {
+            "key": "relatedNode",
+            "itemType": "node"
+          },
+          "text": "Failing Elements"
+        }
+      ],
+      "items": [
+        {
+          "node": {
+            "type": "node",
+            "lhId": "23-44-A",
+            "path": "1,HTML,1,BODY,4,DIV,0,DIV,5,FOOTER,0,DIV,0,A",
+            "selector": "div.l-site-container > footer.usa-footer > div.usa-footer__return-to-top > a.back-to-top",
+            "boundingRect": {
+              "top": 517,
+              "bottom": 573,
+              "left": 352,
+              "right": 408,
+              "width": 56,
+              "height": 56
+            },
+            "snippet": "<a href=\"#top\" class=\"back-to-top\" aria-hidden=\"true\" style=\"bottom: 282.391px;\">",
+            "nodeLabel": "Back to top",
+            "explanation": "Fix all of the following:\n  Focusable content should have tabindex='-1' or be removed from the DOM"
+          }
+        }
+      ],
+      "debugData": {
+        "type": "debugdata",
+        "impact": "serious",
+        "tags": [
+          "cat.name-role-value",
+          "wcag2a",
+          "wcag412",
+          "wcag131"
+        ]
+      }
+    },
+    "errorCount": 1
+  },
+  {
+    "id": "frame-title",
+    "title": "`<frame>` or `<iframe>` elements do not have a title",
+    "description": "Screen reader users rely on frame titles to describe the contents of frames. [Learn more](https://web.dev/frame-title/).",
+    "score": 0,
+    "scoreDisplayMode": "binary",
+    "details": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "itemType": "node",
+          "subItemsHeading": {
+            "key": "relatedNode",
+            "itemType": "node"
+          },
+          "text": "Failing Elements"
+        }
+      ],
+      "items": [
+        {
+          "node": {
+            "type": "node",
+            "lhId": "23-136-IFRAME",
+            "path": "1,HTML,1,BODY,20,DIV,2,DIV,0,DIV,0,DIV,0,IFRAME",
+            "selector": "div > div > div.scrollable > iframe",
+            "boundingRect": {
+              "top": 202,
+              "bottom": 653,
+              "left": 138,
+              "right": 409,
+              "width": 271,
+              "height": 451
+            },
+            "snippet": "<iframe data-src=\"https://hhsgovfedramp.gov1.qualtrics.com/jfe/form/SV_56zoCruqdJGK3sx?Q_CHL…\" width=\"100%\" height=\"100%\" frameborder=\"0\" name=\"survey-iframe-SI_77fEGKa4kOkOroV\" data-name=\"embedded-iframe-SI_77fEGKa4kOkOroV\" data-gtm-yt-inspected-48905_810=\"true\" data-gtm-yt-inspected-48905_696=\"true\" data-gtm-yt-inspected-48905_809=\"true\" data-gtm-yt-inspected-48905_1254=\"true\" data-gtm-yt-inspected-40=\"true\">",
+            "nodeLabel": "div > div > div.scrollable > iframe",
+            "explanation": "Fix any of the following:\n  Element has no title attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        }
+      ],
+      "debugData": {
+        "type": "debugdata",
+        "impact": "serious",
+        "tags": [
+          "cat.text-alternatives",
+          "wcag2a",
+          "wcag241",
+          "wcag412",
+          "section508",
+          "section508.22.i"
+        ]
+      }
+    },
+    "errorCount": 1
+  },
+  {
+    "id": "heading-order",
+    "title": "Heading elements are not in a sequentially-descending order",
+    "description": "Properly ordered headings that do not skip levels convey the semantic structure of the page, making it easier to navigate and understand when using assistive technologies. [Learn more](https://web.dev/heading-order/).",
+    "score": 0,
+    "scoreDisplayMode": "binary",
+    "details": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "itemType": "node",
+          "subItemsHeading": {
+            "key": "relatedNode",
+            "itemType": "node"
+          },
+          "text": "Failing Elements"
+        }
+      ],
+      "items": [
+        {
+          "node": {
+            "type": "node",
+            "lhId": "23-137-H3",
+            "path": "1,HTML,1,BODY,4,DIV,0,DIV,4,MAIN,0,DIV,0,DIV,0,DIV,1,DIV,0,ARTICLE,0,DIV,5,DIV,0,DIV,0,SECTION,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,1,DIV,0,DIV,0,SECTION,0,DIV,0,DIV,1,H3",
+            "selector": "section.usa-section > div.field > div.field__item > h3",
+            "boundingRect": {
+              "top": 6658,
+              "bottom": 6735,
+              "left": 16,
+              "right": 396,
+              "width": 380,
+              "height": 77
+            },
+            "snippet": "<h3>",
+            "nodeLabel": "Medicaid Redeterminations PSA: How to Stay Covered During Medicaid & CHIP Renew…",
+            "explanation": "Fix any of the following:\n  Heading order invalid"
+          }
+        }
+      ],
+      "debugData": {
+        "type": "debugdata",
+        "impact": "moderate",
+        "tags": [
+          "cat.semantics",
+          "best-practice"
+        ]
+      }
+    },
+    "errorCount": 1
+  },
+  {
+    "id": "image-alt",
+    "title": "Image elements do not have `[alt]` attributes",
+    "description": "Informative elements should aim for short, descriptive alternate text. Decorative elements can be ignored with an empty alt attribute. [Learn more](https://web.dev/image-alt/).",
+    "score": 0,
+    "scoreDisplayMode": "binary",
+    "details": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "itemType": "node",
+          "subItemsHeading": {
+            "key": "relatedNode",
+            "itemType": "node"
+          },
+          "text": "Failing Elements"
+        }
+      ],
+      "items": [
+        {
+          "node": {
+            "type": "node",
+            "lhId": "23-138-IMG",
+            "path": "1,HTML,1,BODY,20,DIV,3,DIV,0,DIV,0,IMG",
+            "selector": "div.QSISlider > div > div > img",
+            "boundingRect": {
+              "top": 205,
+              "bottom": 234,
+              "left": 373,
+              "right": 402,
+              "width": 29,
+              "height": 29
+            },
+            "snippet": "<img src=\"https://gov1.siteintercept.qualtrics.com/static/q-siteintercept/~/img/bwc_…\">",
+            "nodeLabel": "div.QSISlider > div > div > img",
+            "explanation": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        },
+        {
+          "node": {
+            "type": "node",
+            "lhId": "23-139-IMG",
+            "path": "1,HTML,1,BODY,20,DIV,4,DIV,0,DIV,0,IMG",
+            "selector": "div.QSISlider > div > div > img",
+            "boundingRect": {
+              "top": 551,
+              "bottom": 656,
+              "left": 98,
+              "right": 133,
+              "width": 35,
+              "height": 105
+            },
+            "snippet": "<img src=\"https://gov1.qualtrics.com/WRQualtricsSiteIntercept/Graphic.php?IM=IM_egnS…\" style=\"width: 35px; height: 105px;\">",
+            "nodeLabel": "div.QSISlider > div > div > img",
+            "explanation": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        }
+      ],
+      "debugData": {
+        "type": "debugdata",
+        "impact": "critical",
+        "tags": [
+          "cat.text-alternatives",
+          "wcag2a",
+          "wcag111",
+          "section508",
+          "section508.22.a",
+          "ACT"
+        ]
+      }
+    },
+    "errorCount": 2
+  }
+]

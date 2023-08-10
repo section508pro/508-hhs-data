@@ -1,1 +1,7 @@
-{}
+{
+  "aria-hidden-focus": 200,
+  "frame-title": 200,
+  "heading-order": 8,
+  "color-contrast": 2,
+  "image-alt": 2
+}
