@@ -1,0 +1,150 @@
+[
+  {
+    "id": "color-contrast",
+    "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+    "description": "Low-contrast text is difficult or impossible for many users to read. [Learn more](https://web.dev/color-contrast/).",
+    "score": 0,
+    "scoreDisplayMode": "binary",
+    "details": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "itemType": "node",
+          "subItemsHeading": {
+            "key": "relatedNode",
+            "itemType": "node"
+          },
+          "text": "Failing Elements"
+        }
+      ],
+      "items": [
+        {
+          "node": {
+            "type": "node",
+            "lhId": "15-206-SPAN",
+            "path": "1,HTML,1,BODY,4,DIV,0,DIV,6,FOOTER,0,DIV,0,A,1,SPAN",
+            "selector": "footer.usa-footer > div.usa-footer__return-to-top > a.back-to-top > span",
+            "boundingRect": {
+              "top": 503,
+              "bottom": 532,
+              "left": 344,
+              "right": 384,
+              "width": 40,
+              "height": 30
+            },
+            "snippet": "<span>",
+            "nodeLabel": "Back to top",
+            "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.1 (foreground color: #c3dae9, background color: #5e9ac4, font size: 11.2pt (14.88px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          "subItems": {
+            "type": "subitems",
+            "items": [
+              {
+                "relatedNode": {
+                  "type": "node",
+                  "lhId": "15-86-A",
+                  "path": "1,HTML,1,BODY,4,DIV,0,DIV,6,FOOTER,0,DIV,0,A",
+                  "selector": "div.l-site-container > footer.usa-footer > div.usa-footer__return-to-top > a.back-to-top",
+                  "boundingRect": {
+                    "top": 485,
+                    "bottom": 541,
+                    "left": 336,
+                    "right": 392,
+                    "width": 56,
+                    "height": 56
+                  },
+                  "snippet": "<a href=\"#top\" class=\"back-to-top\" aria-hidden=\"true\" style=\"bottom: 282.391px;\">",
+                  "nodeLabel": "Back to top"
+                }
+              },
+              {
+                "relatedNode": {
+                  "type": "node",
+                  "lhId": "15-207-BODY",
+                  "path": "1,HTML,1,BODY",
+                  "selector": "body#top",
+                  "boundingRect": {
+                    "top": 0,
+                    "bottom": 15681,
+                    "left": 0,
+                    "right": 412,
+                    "width": 412,
+                    "height": 15681
+                  },
+                  "snippet": "<body class=\"path-node not-front node-page node-page--node-type-article\" id=\"top\">",
+                  "nodeLabel": "body#top"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "debugData": {
+        "type": "debugdata",
+        "impact": "serious",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143"
+        ]
+      }
+    },
+    "errorCount": 1
+  },
+  {
+    "id": "frame-title",
+    "title": "`<frame>` or `<iframe>` elements do not have a title",
+    "description": "Screen reader users rely on frame titles to describe the contents of frames. [Learn more](https://web.dev/frame-title/).",
+    "score": 0,
+    "scoreDisplayMode": "binary",
+    "details": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "itemType": "node",
+          "subItemsHeading": {
+            "key": "relatedNode",
+            "itemType": "node"
+          },
+          "text": "Failing Elements"
+        }
+      ],
+      "items": [
+        {
+          "node": {
+            "type": "node",
+            "lhId": "15-200-IFRAME",
+            "path": "1,HTML,1,BODY,4,DIV,0,DIV,5,MAIN,0,DIV,0,DIV,0,DIV,1,DIV,2,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,IFRAME",
+            "selector": "div > div > div.scrollable > iframe",
+            "boundingRect": {
+              "top": 14015,
+              "bottom": 14515,
+              "left": 16,
+              "right": 316,
+              "width": 300,
+              "height": 500
+            },
+            "snippet": "<iframe data-src=\"https://hhsgovfedramp.gov1.qualtrics.com/jfe/form/SV_56zoCruqdJGK3sx?Q_CHL…\" width=\"100%\" height=\"100%\" frameborder=\"0\" name=\"survey-iframe-SI_6hZviM7sWzSbL7L\" data-name=\"embedded-iframe-SI_6hZviM7sWzSbL7L\" data-gtm-yt-inspected-48905_810=\"true\" data-gtm-yt-inspected-48905_696=\"true\" data-gtm-yt-inspected-48905_809=\"true\" data-gtm-yt-inspected-48905_1254=\"true\" data-gtm-yt-inspected-38=\"true\">",
+            "nodeLabel": "div > div > div.scrollable > iframe",
+            "explanation": "Fix any of the following:\n  Element has no title attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        }
+      ],
+      "debugData": {
+        "type": "debugdata",
+        "impact": "serious",
+        "tags": [
+          "cat.text-alternatives",
+          "wcag2a",
+          "wcag241",
+          "wcag412",
+          "section508",
+          "section508.22.i"
+        ]
+      }
+    },
+    "errorCount": 1
+  }
+]
