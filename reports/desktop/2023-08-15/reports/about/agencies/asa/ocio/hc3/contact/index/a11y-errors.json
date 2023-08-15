@@ -1,0 +1,203 @@
+[
+  {
+    "id": "aria-hidden-focus",
+    "title": "`[aria-hidden=\"true\"]` elements contain focusable descendents",
+    "description": "Focusable descendents within an `[aria-hidden=\"true\"]` element prevent those interactive elements from being available to users of assistive technologies like screen readers. [Learn more](https://web.dev/aria-hidden-focus/).",
+    "score": 0,
+    "scoreDisplayMode": "binary",
+    "details": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "itemType": "node",
+          "subItemsHeading": {
+            "key": "relatedNode",
+            "itemType": "node"
+          },
+          "text": "Failing Elements"
+        }
+      ],
+      "items": [
+        {
+          "node": {
+            "type": "node",
+            "lhId": "19-90-A",
+            "path": "1,HTML,1,BODY,4,DIV,0,DIV,6,FOOTER,0,DIV,0,A",
+            "selector": "div.l-site-container > footer.usa-footer > div.usa-footer__return-to-top > a.back-to-top",
+            "boundingRect": {
+              "top": 463,
+              "bottom": 519,
+              "left": 1274,
+              "right": 1330,
+              "width": 56,
+              "height": 56
+            },
+            "snippet": "<a href=\"#top\" class=\"back-to-top\" aria-hidden=\"true\" style=\"bottom: 421.062px;\">",
+            "nodeLabel": "Back to top",
+            "explanation": "Fix all of the following:\n  Focusable content should have tabindex='-1' or be removed from the DOM"
+          }
+        }
+      ],
+      "debugData": {
+        "type": "debugdata",
+        "impact": "serious",
+        "tags": [
+          "cat.name-role-value",
+          "wcag2a",
+          "wcag412",
+          "wcag131"
+        ]
+      }
+    },
+    "errorCount": 1
+  },
+  {
+    "id": "frame-title",
+    "title": "`<frame>` or `<iframe>` elements do not have a title",
+    "description": "Screen reader users rely on frame titles to describe the contents of frames. [Learn more](https://web.dev/frame-title/).",
+    "score": 0,
+    "scoreDisplayMode": "binary",
+    "details": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "itemType": "node",
+          "subItemsHeading": {
+            "key": "relatedNode",
+            "itemType": "node"
+          },
+          "text": "Failing Elements"
+        }
+      ],
+      "items": [
+        {
+          "node": {
+            "type": "node",
+            "lhId": "19-193-IFRAME",
+            "path": "1,HTML,1,BODY,4,DIV,0,DIV,5,MAIN,0,DIV,0,DIV,0,DIV,1,DIV,2,DIV,0,DIV,1,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,DIV,0,IFRAME",
+            "selector": "div > div > div.scrollable > iframe",
+            "boundingRect": {
+              "top": 2325,
+              "bottom": 2625,
+              "left": 423,
+              "right": 823,
+              "width": 400,
+              "height": 300
+            },
+            "snippet": "<iframe data-src=\"https://hhsgovfedramp.gov1.qualtrics.com/jfe/form/SV_3Jyxvg4zv8sPGrH?Q_CHL…\" width=\"100%\" height=\"100%\" frameborder=\"0\" name=\"survey-iframe-SI_6hZviM7sWzSbL7L\" data-name=\"embedded-iframe-SI_6hZviM7sWzSbL7L\" data-gtm-yt-inspected-48905_810=\"true\" data-gtm-yt-inspected-48905_696=\"true\" data-gtm-yt-inspected-48905_809=\"true\" data-gtm-yt-inspected-48905_1254=\"true\" data-gtm-yt-inspected-51=\"true\">",
+            "nodeLabel": "div > div > div.scrollable > iframe",
+            "explanation": "Fix any of the following:\n  Element has no title attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        },
+        {
+          "node": {
+            "type": "node",
+            "lhId": "19-208-IFRAME",
+            "path": "1,HTML,1,BODY,22,DIV,2,DIV,0,DIV,0,DIV,0,IFRAME",
+            "selector": "div > div > div.scrollable > iframe",
+            "boundingRect": {
+              "top": 235,
+              "bottom": 935,
+              "left": 946,
+              "right": 1346,
+              "width": 400,
+              "height": 700
+            },
+            "snippet": "<iframe data-src=\"https://hhsgovfedramp.gov1.qualtrics.com/jfe/form/SV_8k6WYsJlEIYyjxs?Q_CHL…\" width=\"100%\" height=\"100%\" frameborder=\"0\" name=\"survey-iframe-SI_3L4uBkHs5Pyzfca\" data-name=\"embedded-iframe-SI_3L4uBkHs5Pyzfca\" data-gtm-yt-inspected-48905_810=\"true\" data-gtm-yt-inspected-48905_696=\"true\" data-gtm-yt-inspected-48905_809=\"true\" data-gtm-yt-inspected-48905_1254=\"true\" data-gtm-yt-inspected-51=\"true\">",
+            "nodeLabel": "div > div > div.scrollable > iframe",
+            "explanation": "Fix any of the following:\n  Element has no title attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        }
+      ],
+      "debugData": {
+        "type": "debugdata",
+        "impact": "serious",
+        "tags": [
+          "cat.text-alternatives",
+          "wcag2a",
+          "wcag241",
+          "wcag412",
+          "section508",
+          "section508.22.i"
+        ]
+      }
+    },
+    "errorCount": 2
+  },
+  {
+    "id": "image-alt",
+    "title": "Image elements do not have `[alt]` attributes",
+    "description": "Informative elements should aim for short, descriptive alternate text. Decorative elements can be ignored with an empty alt attribute. [Learn more](https://web.dev/image-alt/).",
+    "score": 0,
+    "scoreDisplayMode": "binary",
+    "details": {
+      "type": "table",
+      "headings": [
+        {
+          "key": "node",
+          "itemType": "node",
+          "subItemsHeading": {
+            "key": "relatedNode",
+            "itemType": "node"
+          },
+          "text": "Failing Elements"
+        }
+      ],
+      "items": [
+        {
+          "node": {
+            "type": "node",
+            "lhId": "19-209-IMG",
+            "path": "1,HTML,1,BODY,22,DIV,3,DIV,0,DIV,0,IMG",
+            "selector": "div.QSISlider > div > div > img",
+            "boundingRect": {
+              "top": 238,
+              "bottom": 267,
+              "left": 1310,
+              "right": 1339,
+              "width": 29,
+              "height": 29
+            },
+            "snippet": "<img src=\"https://gov1.siteintercept.qualtrics.com/static/q-siteintercept/~/img/bwc_…\">",
+            "nodeLabel": "div.QSISlider > div > div > img",
+            "explanation": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        },
+        {
+          "node": {
+            "type": "node",
+            "lhId": "19-210-IMG",
+            "path": "1,HTML,1,BODY,22,DIV,5,DIV,0,DIV,0,IMG",
+            "selector": "div.QSISlider > div > div > img",
+            "boundingRect": {
+              "top": 561,
+              "bottom": 681,
+              "left": 902,
+              "right": 942,
+              "width": 40,
+              "height": 120
+            },
+            "snippet": "<img src=\"https://gov1.qualtrics.com/WRQualtricsSiteIntercept/Graphic.php?IM=IM_egnS…\">",
+            "nodeLabel": "div.QSISlider > div > div > img",
+            "explanation": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        }
+      ],
+      "debugData": {
+        "type": "debugdata",
+        "impact": "critical",
+        "tags": [
+          "cat.text-alternatives",
+          "wcag2a",
+          "wcag111",
+          "section508",
+          "section508.22.a",
+          "ACT"
+        ]
+      }
+    },
+    "errorCount": 2
+  }
+]
